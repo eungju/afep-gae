@@ -1,4 +1,5 @@
 <html>
+    <link href="/statics/application.css" type="text/css" rel="stylesheet">
 <body>
 
 <form action="/tasks" method="POST">
@@ -8,18 +9,22 @@
 </form>
 
 <form action="/tasks/close_list" method="POST">
-<input type="submit" value="Close">
+<input id="close_list_button" type="submit" value="Close">
 </form>
 
-<table width="100%">
+<table id="task_list">
   <colgroup>
+      <col width="100" />
+      <col width="100" />
   <col width="*" />
   <col width="100" />
   </colgroup>
 {% for task in tasks %}
 <tr>
-  <td>{{task.subject}}</td>
-  <td>{{task.created_at|date:"H:i"}}</td>
+    <td><a class="button" href="">Start</a><span class="date">{{task.started_at}}</span></td>
+    <td><a class="button" href="">Cancel/Complete</a><span class="date">{{task.completed_at}}</span></td>
+  <td><p class="subject">{{task.subject}}</p></td>
+  <td><span class="date">{{task.created_at|date:"H:i"}}</span></td>
 </tr>
 {% endfor %}
 </table>

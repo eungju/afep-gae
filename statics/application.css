@@ -1,0 +1,35 @@
+body, table {
+    font-size: 10pt;
+}
+
+input[type=submit], a.button {
+    padding: 1px 4px 1px 4px;
+    background-color: lightgray;
+    border: 1px solid darkgray;
+    text-decoration: none;
+}
+
+#close_list_button {
+    width: 100%;
+}
+
+#task_list {
+    margin: 2px;
+    width: 100%;
+    border-spacing: 0
+}
+
+#task_list td {
+    border-bottom: 1px solid lightgray;
+    padding: 4px;
+    list-style-type: none;
+}
+
+#task_list p.subject {
+    display: inline;
+}
+
+#task_list span.date {
+    font-family: monospace;
+}
+
